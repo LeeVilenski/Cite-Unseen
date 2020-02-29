@@ -1,6 +1,6 @@
 {
-	"biased": [
-	],
+    "biased": [
+    ],
     "blogs": [
     ],
     "books": [
@@ -21,6 +21,10 @@
         "/opinions/"
     ],
     "press": [
+    ],
+    "rspDeprecated": [
+    ],
+    "rspGenerallyUnreliable": [
     ],
     "social": [
     ],
