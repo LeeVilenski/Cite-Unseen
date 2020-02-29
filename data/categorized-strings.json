@@ -1,6 +1,4 @@
 {
-    "biased": [
-    ],
     "blogs": [
     ],
     "books": [
@@ -8,11 +6,13 @@
     "community": [
         "-irpt"
     ],
-    "conspiracy": [
-    ],
-    "fakeNews": [
-    ],
     "government": [
+    ],
+    "mbfcBiased": [
+    ],
+    "mbfcConspiracy": [
+    ],
+    "mbfcFakeNews": [
     ],
     "news": [
     ],
