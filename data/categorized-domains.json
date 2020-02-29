@@ -1,5 +1,65 @@
 {
-    "biased": [
+    "blogs": [
+        "insider.foxnews.com/",
+        "medium.com/",
+        "npr.org/blogs",
+        "politicalticker.blogs.cnn.com"
+    ],
+    "books": [
+        "books.google.com"
+    ],
+    "community": [
+        "digitaljournal.com",
+        "examiner.com/",
+        "globalvoices.org/",
+        "newsparticipation.com",
+        "wikinews.org",
+        "wikitribune.com"
+    ],
+    "government": [
+        "gc.ca",
+        "go.id",
+        "go.kr",
+        "go.jp",
+        "gob.",
+        "gob/",
+        "gouv.",
+        "gouv/",
+        "gov.",
+        "gov/",
+        "govt.",
+        "govt/",
+        "gub.",
+        "gub/",
+        "gv.at",
+        "mil",
+        "mil.",
+        "mil/",
+        "aa.com.tr",
+        "admin.ch",
+        "agenciabrasil.ebc.com.br/",
+        "bernama.com",
+        "cna.com.tw",
+        "focustaiwan.tw",
+        "hina.hr",
+        "kcna.kp",
+        "kcna.kp/",
+        "kenyanews.go.ke/",
+        "kpl.net.la",
+        "nan.ng",
+        "news.cn/",
+        "news.vnanet.vn/",
+        "pia.gov.ph",
+        "pna.gov.ph",
+        "presstv.ir",
+        "ria.ru",
+        "rtvm.gov.ph",
+        "tass.com/",
+        "tdh.gov.tm",
+        "telam.com.ar/",
+        "voa.com"
+    ],
+    "mbfcBiased": [
         "aa.com.tr/en",
         "ac2news.com",
         "acculturated.com",
@@ -501,24 +561,7 @@
         "youngcons.com/",
         "zcomm.org/zmag/"
     ],
-    "blogs": [
-        "insider.foxnews.com/",
-        "medium.com/",
-        "npr.org/blogs",
-        "politicalticker.blogs.cnn.com"
-    ],
-    "books": [
-        "books.google.com"
-    ],
-    "community": [
-        "digitaljournal.com",
-        "examiner.com/",
-        "globalvoices.org/",
-        "newsparticipation.com",
-        "wikinews.org",
-        "wikitribune.com"
-    ],
-    "conspiracy": [
+    "mbfcConspiracy": [
         "21stcenturywire.com",
         "369news.net",
         "abeldanger.net",
@@ -750,7 +793,7 @@
         "yournewswire.com",
         "zerohedge.com"
     ],
-    "fakeNews": [
+    "mbfcFakeNews": [
         "100percentfedup.com",
         "10news.one",
         "247newsmedia.com",
@@ -1261,49 +1304,6 @@
         "xolxol.ph",
         "yesimright.com",
         "zootfeed.com"
-    ],
-    "government": [
-        "gc.ca",
-        "go.id",
-        "go.kr",
-        "go.jp",
-        "gob.",
-        "gob/",
-        "gouv.",
-        "gouv/",
-        "gov.",
-        "gov/",
-        "govt.",
-        "govt/",
-        "gub.",
-        "gub/",
-        "gv.at",
-        "mil",
-        "mil.",
-        "mil/",
-        "aa.com.tr",
-        "admin.ch",
-        "agenciabrasil.ebc.com.br/",
-        "bernama.com",
-        "cna.com.tw",
-        "focustaiwan.tw",
-        "hina.hr",
-        "kcna.kp",
-        "kcna.kp/",
-        "kenyanews.go.ke/",
-        "kpl.net.la",
-        "nan.ng",
-        "news.cn/",
-        "news.vnanet.vn/",
-        "pia.gov.ph",
-        "pna.gov.ph",
-        "presstv.ir",
-        "ria.ru",
-        "rtvm.gov.ph",
-        "tass.com/",
-        "tdh.gov.tm",
-        "telam.com.ar/",
-        "voa.com"
     ],
     "news": [
         "7news.com.au",
