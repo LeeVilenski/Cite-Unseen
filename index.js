@@ -86,6 +86,14 @@ function addIcons(categorizedDomains, categorizedStrings) {
 			|| categorizedStrings.biased.some(el => refLinks[0].getAttribute('href').includes(el))) {
 				processIcon(refLinks[0], "biased");
 			}
+			if (categorizedDomains.rspDeprecated.some(el => refLinks[0].getAttribute('href').includes("." + el) || refLinks[0].getAttribute('href').includes("//" + el))
+			|| categorizedStrings.rspDeprecated.some(el => refLinks[0].getAttribute('href').includes(el))) {
+				processIcon(refLinks[0], "rspDeprecated");
+			}
+			if (categorizedDomains.rspGenerallyUnreliable.some(el => refLinks[0].getAttribute('href').includes("." + el) || refLinks[0].getAttribute('href').includes("//" + el))
+			|| categorizedStrings.rspGenerallyUnreliable.some(el => refLinks[0].getAttribute('href').includes(el))) {
+				processIcon(refLinks[0], "rspGenerallyUnreliable");
+			}
 		} else {
 			if (refs.item(i).classList.contains("book")) {
 				processIcon(refs.item(i), "book");
@@ -156,6 +164,16 @@ function processIcon(node, type) {
 			textNode.setAttribute("src", "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAQAAACRZI9xAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiCxIGIwCgvLX/AAAA60lEQVQoz43RMS+DQRgH8F+LMEgHqUUiamDhIzRpI0FsvoFFmvgEvoCpRh/AIAZWJDQ2m4iBxSIGUxOJkKBReobyujd9E55b7nK/3P/uOf6svmies6NuUNmV9yw8qyF8j83s8/YSEByBoe5GPiHNiC/IY0MpTQoR6RhWcKuWDhrXSYL25awrO4f+hNy71vaqqeJUzYVJxXQQdSWHnrTsahnxqZUOmrDlQxDcWTNgXlUjBoseo0cHZ4pmrPyCac8pEATHqUvY7gFBUIlbV83s91y8WPXSc8aNqZ/f7daYZUtKRr15cOnEgbb/1herOlytIrzt+QAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0xMS0xOFQwNjozNTowMCswMDowMFok5EUAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMTEtMThUMDY6MzU6MDArMDA6MDAreVz5AAAAAElFTkSuQmCC");
 			textNode.setAttribute("alt", "This source is a tabloid article.");
 			textNode.setAttribute("title", "[Cite Unseen] This source is a tabloid article.");
+			break;
+		case "rspDeprecated":
+			textNode.setAttribute("src", " data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAABmJLR0QA/wD/AP+gvaeTAAACl0lEQVQ4jZ2UzUtUURjGf+fce+50ce51dMigyQkdJGVMCD8gCMudy6CFmS4MWrVzV39ELZNaZIhpm6CvTSBB2gSlA9EyKihahKWGd5w7M3e8p4XTdB1bdXbv18PD877PETS8pFKz/bY9pYRoLBFoTd73FzaCYCKa39eZVGp2PJGYOuu6/AukGoa8KhS4v7X14EcQjP/JG40A51yXQ0IggQ9SsmLbtJXLxIXAFIJ2y6JZyt5PlUp3MQwfAsgowIjrEhOCstY8sSyex+PcWVvjpu/zzjQBUEIw7DhMtLRcPKzUIoCRVGr2UiIxNeI4WFLya3eX25UK1xYXSaZSDA4NEZgmX0olur5/36MvBMcsC1fK3s+VSrcctO2pYdfFkhKA5aYmrt64QWtrKx2dnQBks1lMy9qnjyUEZxyHftu+KKWUmFHxmpo42ddHLBbbN6S1BuCtZfEsHgfABKSUe5pEn1TqwFZqKHzUGufCBcKjR4G/q5XRAECaJsVikVwuR7FYZGlpiVKpRLVa5U0qxZXpaXa/fdvDrc2Y0QAg1Jrm5mbGxsbqOc/z6MpkSLS0MDczw8D2NphmA5PIYYXlMplMph6vr6+Ty+U40dNDazLJ20ePaK+tW9fmZBiGBPovF1ko4HlePc7n84yOjgJw79YtBn7+rNeqWhOGIXLV92dfbm9TrgFlCwUezs/XGx3HAWBzc5MXc3N0GXtHHmjNa88j7/sPDD8MH38KguOOEKfSsRhthsHT9+9x0mk6MhnS6TRrq6tcn5zk/MYGMSkJtGbZ8+oeqouRVOrueCJxecRxUFKypjVfbRttGBzZ2eG01phCUNGalQgARAxYZ2QYp9qVIiUl3dUqPUFAe038So3BQoOLD/j9f/6T39EbEfZIJ3nIAAAAAElFTkSuQmCC");
+			textNode.setAttribute("alt", "From WP:RSP, there is community consensus to deprecate the source. The source is considered generally unreliable, and use of the source is generally prohibited.");
+			textNode.setAttribute("title", "[Cite Unseen] From WP:RSP, there is community consensus to deprecate the source. The source is considered generally unreliable, and use of the source is generally prohibited.");
+			break;
+		case "rspGenerallyUnreliable":
+			textNode.setAttribute("src", "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAq1BMVEUAAADEAADMAADMAADMAADMAADMAADVAADLAADMAADMAADNAADNAADMAADMAADLAADNAADMAADMAADMAADMAADMAADLAADMAADNAADLAADMAADRAADMAADQEhLbSUneW1vaSEjTIyPuq6v++/v////uqanTIiLOBwfdVlb+/Pz87u7ZPz/eWFjdV1fTISHfXl7uqKjPERHaR0fPEBD++vrtp6fcUVHSHx/eWlqG88BTAAAAHHRSTlMADW695vptDFjp6FZ6/nlsu+fl+fjkvLprVHgL0nKBsgAAAAFiS0dEJLQG+ZkAAAAHdElNRQfkAg4GLCzUeqyYAAAAtklEQVQY003Q2RKCMAwF0AgoChYtbqBBwNZd0VYQ///LLDv3KT2TyTQBUBloujE09JEJdcYTDPZhFKBlVzAl8YFxztnxRJyyg5wvV17mdieqy7TiBz5ZTclkABoerq+W3jgDPWC8IybmQCNVdCRdWIS8T+ESjIj3Sa5g/Ul7lIoNjPDIO8rQA5Oebi19c/UfsMm9ocuZ+MUaDknexdA0y8m2WtWmKORPCqR+cw7Tm7sLd+PtiscffvceuGkSePYAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjAtMDItMTRUMDY6NDQ6NDQrMDA6MDBCbcELAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIwLTAyLTE0VDA2OjQ0OjQ0KzAwOjAwMzB5twAAAABJRU5ErkJggg==");
+			textNode.setAttribute("alt", "From WP:RSP, editors show consensus that the source is questionable in most cases.");
+			textNode.setAttribute("title", "[Cite Unseen] From WP:RSP, editors show consensus that the source is questionable in most cases.");
 			break;
 		default:
 			break;
