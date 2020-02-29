@@ -57,18 +57,22 @@ function addIcons(categorizedDomains, categorizedStrings) {
 				processIcon(refLinks[0], "blog");
 				notNews = true;
 			}
+			if (categorizedDomains.government.some(el => refLinks[0].getAttribute('href').includes("." + el) || refLinks[0].getAttribute('href').includes("//" + el))
+			|| categorizedStrings.government.some(el => refLinks[0].getAttribute('href').includes(el))) {
+				processIcon(refLinks[0], "government");
+			}
 			if (categorizedDomains.tabloids.some(el => refLinks[0].getAttribute('href').includes("." + el) || refLinks[0].getAttribute('href').includes("//" + el))
 			|| categorizedStrings.tabloids.some(el => refLinks[0].getAttribute('href').includes(el))) {
 				processIcon(refLinks[0], "tabloid");
 				notNews = true;	
 			}
-			if (categorizedDomains.fakeNews.some(el => refLinks[0].getAttribute('href').includes("." + el) || refLinks[0].getAttribute('href').includes("//" + el))
-			|| categorizedStrings.fakeNews.some(el => refLinks[0].getAttribute('href').includes(el))) {
+			if (categorizedDomains.mbfcFakeNews.some(el => refLinks[0].getAttribute('href').includes("." + el) || refLinks[0].getAttribute('href').includes("//" + el))
+			|| categorizedStrings.mbfcFakeNews.some(el => refLinks[0].getAttribute('href').includes(el))) {
 				processIcon(refLinks[0], "fake");
 				notNews = true;
 			}
-			if (categorizedDomains.conspiracy.some(el => refLinks[0].getAttribute('href').includes("." + el) || refLinks[0].getAttribute('href').includes("//" + el))
-			|| categorizedStrings.conspiracy.some(el => refLinks[0].getAttribute('href').includes(el))) {
+			if (categorizedDomains.mbfcConspiracy.some(el => refLinks[0].getAttribute('href').includes("." + el) || refLinks[0].getAttribute('href').includes("//" + el))
+			|| categorizedStrings.mbfcConspiracy.some(el => refLinks[0].getAttribute('href').includes(el))) {
 				processIcon(refLinks[0], "conspiracy");
 				notNews = true;
 			}
@@ -78,12 +82,8 @@ function addIcons(categorizedDomains, categorizedStrings) {
 					processIcon(refLinks[0], "news");
 				}
 			}
-			if (categorizedDomains.government.some(el => refLinks[0].getAttribute('href').includes("." + el) || refLinks[0].getAttribute('href').includes("//" + el))
-			|| categorizedStrings.government.some(el => refLinks[0].getAttribute('href').includes(el))) {
-				processIcon(refLinks[0], "government");
-			}
-			if (categorizedDomains.biased.some(el => refLinks[0].getAttribute('href').includes("." + el) || refLinks[0].getAttribute('href').includes("//" + el))
-			|| categorizedStrings.biased.some(el => refLinks[0].getAttribute('href').includes(el))) {
+			if (categorizedDomains.mbfcBiased.some(el => refLinks[0].getAttribute('href').includes("." + el) || refLinks[0].getAttribute('href').includes("//" + el))
+			|| categorizedStrings.mbfcBiased.some(el => refLinks[0].getAttribute('href').includes(el))) {
 				processIcon(refLinks[0], "biased");
 			}
 			if (categorizedDomains.rspDeprecated.some(el => refLinks[0].getAttribute('href').includes("." + el) || refLinks[0].getAttribute('href').includes("//" + el))
